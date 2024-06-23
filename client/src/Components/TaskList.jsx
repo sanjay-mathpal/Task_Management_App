@@ -12,7 +12,7 @@ const TaskList = () => {
 
   const onDelete = async (id) => {
     try {
-      await axios.delete(`https://task-management-app-two-delta.vercel.app//tasks/${id}`);
+      await axios.delete(`https://task-management-app-backend-ten.vercel.app/tasks/${id}`);
       console.log('Task deleted successfully');
       // Update the tasks state to remove the deleted task
       setTasks(tasks.filter(task => task._id !== id));
@@ -24,7 +24,7 @@ const TaskList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('https://task-management-app-two-delta.vercel.app//tasks');
+        const res = await axios.get('https://task-management-app-backend-ten.vercel.app/tasks');
         console.log(res.data);
         // Sort tasks by creation date in descending order
         const sortedTasks = res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));

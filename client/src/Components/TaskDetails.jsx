@@ -20,7 +20,7 @@ const TaskDetails = () => {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`https://task-management-app-two-delta.vercel.app//tasks/${id}`);
+        const response = await axios.get(`https://task-management-app-backend-ten.vercel.app/tasks/${id}`);
         const fetchedTask = response.data;
 
         setTitle(fetchedTask.title);
@@ -41,7 +41,7 @@ const TaskDetails = () => {
 
   const onUpdate = async () => {
     try {
-      await axios.put(`https://task-management-app-two-delta.vercel.app//tasks/${id}`, {
+      await axios.put(`https://task-management-app-backend-ten.vercel.app/tasks/${id}`, {
         title,
         description: desc,
         dueDate,
