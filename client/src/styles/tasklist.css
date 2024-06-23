@@ -1,0 +1,118 @@
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.task-list {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+#right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+#right button {
+  height: 45px;
+  width: 150px;
+}
+
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.task-status {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.task-status.pending {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.task-status.completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button {
+  height: 30px;
+  padding: 8px 12px;
+  margin: 2px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#danger {
+  background-color: rgb(255, 87, 87);
+}
+
+#danger:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .task-list {
+    padding: 10px;
+  }
+
+  table {
+    width: 100%;
+    max-width: none;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  #right {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}
